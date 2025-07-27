@@ -1,0 +1,13 @@
+{
+  "name": "plemiona-planer-local",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build-map.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

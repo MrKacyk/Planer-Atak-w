@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Symulator – Plan Ataków (Dark Mode)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1c1c1c;
+            color: #00ff7f;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9cffd8;
+        }
+
+        .config,
+        .filters {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .config input,
+        .config button,
+        .filters input,
+        .filters button,
+        select {
+            padding: 6px 8px;
+            font-size: 14px;
+            margin: 0 6px;
+            border: 1px solid #333;
+            background: #333;
+            color: #00ff7f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #2a2a2a;
+            margin-top: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        th,
+        td {
+            padding: 8px 10px;
+            border: 1px solid #444;
+            text-align: center;
+        }
+
+        th {
+            background: #3c3c3c;
+            color: #9cffd8;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .player {
+            color: #00ff7f;
+            font-weight: bold;
+        }
+
+        .countdown {
+            font-weight: bold;
+            color: #ff8c00;
+        }
+
+        .past {
+            background: #4b1f1f;
+        }
+
+        #log {
+            background: #000;
+            color: #0f0;
+            font-family: monospace;
+            padding: 10px;
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Symulator – Plan Ataków</h1>
+
+    <!-- Konfiguracja API -->
+    <div class="config">
+        <label for="apiUrl">Adres API:</label>
+        <input type="text" id="apiUrl" placeholder="Wklej swój API URL" size="50">
+        <button id="saveApiBtn">Dodaj API</button>
+        <select id="apiList"></select>
+        <button id="refreshBtn">Odśwież dane</button>
+    </div>
+
+    <!-- Filtry -->
+    <div class="filters">
+        <label for="dateFilter">Pokaż ataki z dnia:</label>
+        <input type="date" id="dateFilter" />
+        <button id="filterBtn">Filtruj</button>
+    </div>
+
+    <div id="output">Ładowanie danych...</div>
+    <pre id="log"></pre>
+
+    <script>
+        const logEl = document.getElementById('log');
+        function log(msg) {
+            const ts = new Date().toLocaleTimeString();
+            logEl.textContent += `[${ts}] ${msg}\n`;
+            logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        let allOrders = [];
+        let currentSortAsc = true;
+        let countdownInterval = null;
+        let villageMap = {};
+        let discordAlerts = [];
+        let savedApis = [];
+
+        const outputEl = document.getElementById("output");
+        const filterBtn = document.getElementById("filterBtn");
+        const dateFilterEl = document.getElementById("dateFilter");
+        const apiUrlEl = document.getElementById("apiUrl");
+        const saveApiBtn = document.getElementById("saveApiBtn");
+        const apiListEl = document.getElementById("apiList");
+        const refreshBtn = document.getElementById("refreshBtn");
+
+        // ===== API MANAGEMENT =====
+        function loadApis() {
+            const apis = JSON.parse(localStorage.getItem("apiList") || "[]");
+            savedApis = apis;
+            renderApiList();
+        }
+
+        function saveApis() {
+            localStorage.setItem("apiList", JSON.stringify(savedApis));
+            renderApiList();
+        }
+
+        function addApi() {
+            const val = apiUrlEl.value.trim();
+            if (val && !savedApis.includes(val)) {
+                savedApis.push(val);
+                saveApis();
+                apiListEl.value = val;
+                log(`Dodano nowe API: ${val}`);
+                loadData();
+            } else if (savedApis.includes(val)) {
+                log("To API już istnieje na liście.");
+            } else {
+                alert("Podaj poprawny URL API.");
+            }
+        }
+
+        function renderApiList() {
+            apiListEl.innerHTML = "";
+            savedApis.forEach(api => {
+                const opt = document.createElement("option");
+                opt.value = api;
+                opt.textContent = api;
+                apiListEl.appendChild(opt);
+            });
+            if (savedApis.length > 0) {
+                apiListEl.value = savedApis[savedApis.length - 1];
+            }
+        }
+
+        saveApiBtn.addEventListener("click", addApi);
+        apiListEl.addEventListener("change", loadData);
+        refreshBtn.addEventListener("click", loadData);
+
+        // ===== TABLE + ALERTS =====
+        function normStartCoord(coord) {
+            return String(coord || "").replace(/\s+/g, "").trim();
+        }
+
+        function fixSendUrl(rawUrl, startCoord, fallbackVillageId = null) {
+            try {
+                const coord = normStartCoord(startCoord);
+                const mappedId = villageMap[coord];
+                const finalVillageId = mappedId || fallbackVillageId;
+
+                if (!finalVillageId) {
+                    log(`[NO_MAP] Brak ID dla start=${coord}. Link pozostawiony bez zmian.`);
+                    return rawUrl;
+                }
+
+                const u = new URL(rawUrl);
+                u.searchParams.set('village', String(finalVillageId));
+                return u.toString();
+            } catch (e) {
+                log(`[ERR_FIX_URL] ${e.message}`);
+                return rawUrl;
+            }
+        }
+
+        function formatCountdown(timeMs) {
+            const totalSeconds = Math.floor((timeMs - Date.now()) / 1000);
+            if (totalSeconds <= 0) return "0d 0h 0m 0s";
+            const days = Math.floor(totalSeconds / (3600 * 24));
+            const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        function updateCountdowns() {
+            const elements = document.querySelectorAll(".countdown");
+            elements.forEach(el => {
+                const time = new Date(el.dataset.time).getTime();
+                el.textContent = formatCountdown(time);
+            });
+            document.querySelectorAll("tbody tr").forEach(tr => {
+                const cd = tr.querySelector(".countdown");
+                if (!cd) return;
+                const ms = new Date(cd.dataset.time).getTime();
+                if (ms - Date.now() <= 0) tr.classList.add("past");
+            });
+
+            checkDiscordAlerts();
+        }
+
+        function checkDiscordAlerts() {
+            const now = Date.now();
+            discordAlerts = discordAlerts.filter(alert => {
+                if (!alert.sent && alert.time - now <= 5 * 60 * 1000 && alert.time > now) {
+                    alert.sent = true;
+                    sendDiscordNotification(alert.order);
+                    log(`ALERT: Wysyłka za 5 minut -> ${alert.order.target}`);
+                }
+                return true;
+            });
+        }
+
+        async function sendDiscordNotification(order) {
+            try {
+                await fetch("/api/discord", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        content: `⏰ **Przypomnienie!** Atak na **${order.target}** za 5 minut (gracz: ${order.player})`
+                    })
+                });
+            } catch (e) {
+                log(`Błąd wysyłki do Discorda: ${e.message}`);
+            }
+        }
+
+        function renderTable(data) {
+            let table = `
+        <table>
+          <thead>
+            <tr>
+              <th>Cel (Koordynaty)</th>
+              <th>Gracz</th>
+              <th>Atakujący</th>
+              <th>Start (moja wioska)</th>
+              <th>OFF</th>
+              <th>Katapulty</th>
+              <th id="sortTime">Czas wysyłki ${currentSortAsc ? '▲' : '▼'}</th>
+              <th>Pozostały czas</th>
+              <th>Link do wysyłki</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+            discordAlerts = [];
+
+            for (const order of data) {
+                const tMs = new Date(order.shipment_t1).getTime();
+                const rowClass = tMs - Date.now() <= 0 ? "past" : "";
+
+                const fixedUrl = order.send_url
+                    ? fixSendUrl(order.send_url, order.start, order.village_id ?? null)
+                    : null;
+
+                if (!villageMap[normStartCoord(order.start)]) {
+                    log(`[MISSING_MAP] Brak wpisu w villageMap dla ${order.start}`);
+                }
+
+                discordAlerts.push({ order, time: tMs, sent: false });
+
+                table += `
+          <tr class="${rowClass}">
+            <td>${order.target}</td>
+            <td class="player">${order.player}</td>
+            <td>${order.attacker}</td>
+            <td class="nowrap">${order.start || '-'}</td>
+            <td>${order.off}</td>
+            <td>${order.catapult}</td>
+            <td class="nowrap">${new Date(order.shipment_t1).toLocaleString()}</td>
+            <td class="countdown" data-time="${order.shipment_t1}"></td>
+            <td>
+              ${fixedUrl
+                        ? `<a href="${fixedUrl}" target="_blank">${order.send_url_name || 'Wyślij OFF'}</a>`
+                        : '<em>brak linku</em>'
+                    }
+            </td>
+          </tr>
+        `;
+            }
+
+            table += "</tbody></table>";
+            outputEl.innerHTML = table;
+
+            document.getElementById("sortTime").addEventListener("click", toggleSort);
+
+            if (countdownInterval) clearInterval(countdownInterval);
+            updateCountdowns();
+            countdownInterval = setInterval(updateCountdowns, 1000);
+        }
+
+        function applyFilter() {
+            const dateVal = dateFilterEl.value;
+            let filtered = allOrders;
+            if (dateVal) {
+                filtered = allOrders.filter(o => {
+                    const orderDate = new Date(o.shipment_t1).toISOString().split('T')[0];
+                    return orderDate === dateVal;
+                });
+            }
+            renderTable(filtered);
+        }
+
+        function toggleSort() {
+            currentSortAsc = !currentSortAsc;
+            allOrders.sort((a, b) => {
+                const t1 = new Date(a.shipment_t1).getTime();
+                const t2 = new Date(b.shipment_t1).getTime();
+                return currentSortAsc ? t1 - t2 : t2 - t1;
+            });
+            applyFilter();
+        }
+
+        async function loadVillageMap() {
+            try {
+                const r = await fetch('/villageMap.json');
+                if (!r.ok) {
+                    log(`Nie udało się pobrać villageMap.json (${r.status})`);
+                    return {};
+                }
+                const json = await r.json();
+                log(`Załadowano ${Object.keys(json).length} wpisów z villageMap.json`);
+                return json;
+            } catch (e) {
+                log(`Błąd villageMap.json: ${e.message}`);
+                return {};
+            }
+        }
+
+        async function loadData() {
+            try {
+                villageMap = await loadVillageMap();
+
+                const API_URL = apiListEl.value || apiUrlEl.value.trim();
+                if (!API_URL) {
+                    outputEl.innerHTML = "<p><b>Podaj adres API powyżej i kliknij Dodaj API.</b></p>";
+                    return;
+                }
+
+                const res = await fetch(`/api/data?api=${encodeURIComponent(API_URL)}`);
+                if (!res.ok) {
+                    log(`Błąd HTTP z /api/data: ${res.status}`);
+                    outputEl.innerHTML = "<p><b>Nie udało się pobrać danych z API.</b></p>";
+                    return;
+                }
+                const json = await res.json();
+
+                if (!json.targets || json.targets.length === 0) {
+                    outputEl.innerHTML = "<p><b>Brak celów do wyświetlenia.</b></p>";
+                    log("Brak targets w json.");
+                    return;
+                }
+
+                allOrders = [];
+                for (const t of json.targets) {
+                    for (const order of t.my_orders) {
+                        allOrders.push({
+                            target: t.target.target,
+                            player: t.target.player,
+                            attacker: order.player,
+                            off: order.off,
+                            catapult: order.catapult,
+                            shipment_t1: order.shipment_t1,
+                            send_url: order.send_url,
+                            send_url_name: order.send_url_name,
+                            start: order.start || "",
+                            village_id: order.village_id || null
+                        });
+                    }
+                }
+
+                allOrders.sort((a, b) => new Date(a.shipment_t1) - new Date(b.shipment_t1));
+                applyFilter();
+
+            } catch (e) {
+                outputEl.innerHTML = "<p>Błąd: " + e.message + "</p>";
+                log(`Exception: ${e.message}`);
+            }
+        }
+
+        filterBtn.addEventListener("click", applyFilter);
+        loadApis();
+        loadData();
+    </script>
+</body>
+
+</html>

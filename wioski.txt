@@ -1,0 +1,300 @@
+Wioska 001-Brutalny18 (390|446) K43 -> 1291 debugger eval code:4:11
+138/138 -> 1291 debugger eval code:4:11
+Wioska 002-barbarzyńska I (389|448) K43 -> 14918 debugger eval code:4:11
+110/110 -> 14918 debugger eval code:4:11
+Wioska 003-barbarzyńska II (389|443) K43 -> 15065 debugger eval code:4:11
+110/110 -> 15065 debugger eval code:4:11
+Wioska 004-barbarzyńska III (390|445) K43 -> 15029 debugger eval code:4:11
+110/110 -> 15029 debugger eval code:4:11
+Wioska 005-barbarzyńska IV (390|444) K43 -> 1269 debugger eval code:4:11
+105/110 -> 1269 debugger eval code:4:11
+Wioska 006-barbarzyńska V (389|447) K43 -> 8238 debugger eval code:4:11
+110/110 -> 8238 debugger eval code:4:11
+Wioska 007-barbarzyńska VI (388|446) K43 -> 16027 debugger eval code:4:11
+110/110 -> 16027 debugger eval code:4:11
+Wioska 008-barbarzyńska VII (391|447) K43 -> 14367 debugger eval code:4:11
+110/110 -> 14367 debugger eval code:4:11
+Wioska 009-Desagi (391|448) K43 -> 3776 debugger eval code:4:11
+138/138 -> 3776 debugger eval code:4:11
+Wioska 010-diabolo 1993 (392|447) K43 -> 3445 debugger eval code:4:11
+110/110 -> 3445 debugger eval code:4:11
+Wioska 011-chudini7 (392|446) K43 -> 298 debugger eval code:4:11
+110/110 -> 298 debugger eval code:4:11
+Wioska 012-New World I (353|395) K33 -> 32614 debugger eval code:4:11
+101/110 -> 32614 debugger eval code:4:11
+Wioska 013-New World II (354|396) K33 -> 32971 debugger eval code:4:11
+110/110 -> 32971 debugger eval code:4:11
+Wioska 014-New World III (355|396) K33 -> 32343 debugger eval code:4:11
+110/110 -> 32343 debugger eval code:4:11
+Wioska 015-New World IV (356|395) K33 -> 31396 debugger eval code:4:11
+110/110 -> 31396 debugger eval code:4:11
+Wioska 016-New World V (354|397) K33 -> 32081
+110/110 -> 32081 debugger eval code:4:11
+Wioska 017-New World VI (353|398) K33 -> 32147 debugger eval code:4:11
+110/110 -> 32147 debugger eval code:4:11
+Wioska 018-New World VII (351|395) K33 -> 36028 debugger eval code:4:11
+110/110 -> 36028 debugger eval code:4:11
+Wioska 019-New World VIII (352|393) K33 -> 33261 debugger eval code:4:11
+110/110 -> 33261 debugger eval code:4:11
+Wioska 020-New World IX (351|397) K33 -> 33696 debugger eval code:4:11
+110/110 -> 33696 debugger eval code:4:11
+Wioska 021-New World X (351|398) K33 -> 35151 debugger eval code:4:11
+110/110 -> 35151 debugger eval code:4:11
+Wioska 022-New World XI (353|391) K33 -> 35626 debugger eval code:4:11
+110/110 -> 35626 debugger eval code:4:11
+Wioska 023-rzeznik23 I (386|445) K43 -> 15453 debugger eval code:4:11
+110/110 -> 15453 debugger eval code:4:11
+Wioska 024-rzeznik23 II (385|445) K43 -> 15751 debugger eval code:4:11
+110/110 -> 15751 debugger eval code:4:11
+Wioska 025-rzeznik23 III (385|446) K43 -> 6280 debugger eval code:4:11
+138/138 -> 6280 debugger eval code:4:11
+Wioska 026-rzeznik23 IV (378|440) K43 -> 16196 debugger eval code:4:11
+110/110 -> 16196 debugger eval code:4:11
+Wioska 027-rzeznik23 V (385|443) K43 -> 1330 debugger eval code:4:11
+110/110 -> 1330 debugger eval code:4:11
+Wioska 028-New World XII (352|391) K33 -> 36428 debugger eval code:4:11
+110/110 -> 36428 debugger eval code:4:11
+Wioska 029-New World XIII (353|390) K33 -> 33602 debugger eval code:4:11
+110/110 -> 33602 debugger eval code:4:11
+Wioska 030-koterlak2 I (360|396) K33 -> 30350 debugger eval code:4:11
+110/110 -> 30350 debugger eval code:4:11
+Wioska 031-New World XV (356|392) K33 -> 34526
+110/110 -> 34526 debugger eval code:4:11
+Wioska 032-New World XVI (350|399) K33 -> 32611 debugger eval code:4:11
+110/110 -> 32611 debugger eval code:4:11
+Wioska 033-Zaplecze I (321|441) K43 -> 38482 debugger eval code:4:11
+110/110 -> 38482 debugger eval code:4:11
+Wioska 034-New World XVII (349|395) K33 -> 34581 debugger eval code:4:11
+110/110 -> 34581 debugger eval code:4:11
+Wioska 035-New World XVIII (349|394) K33 -> 35461 debugger eval code:4:11
+110/110 -> 35461 debugger eval code:4:11
+Wioska 036-Zaplecze II (295|391) K32 -> 54362 debugger eval code:4:11
+58/110 -> 54362 debugger eval code:4:11
+Wioska 037-New World XIX (349|392) K33 -> 36526 debugger eval code:4:11
+110/110 -> 36526 debugger eval code:4:11
+Wioska 038-New World XX (348|391) K33 -> 34591 debugger eval code:4:11
+110/110 -> 34591 debugger eval code:4:11
+Wioska 039-New World XXI (348|390) K33 -> 36988 debugger eval code:4:11
+110/110 -> 36988 debugger eval code:4:11
+Wioska 040-New World XXII (348|389) K33 -> 38357 debugger eval code:4:11
+110/110 -> 38357 debugger eval code:4:11
+Wioska 041-New World XXIII (347|390) K33 -> 34964 debugger eval code:4:11
+102/110 -> 34964 debugger eval code:4:11
+Wioska 042-Micha$o VI (345|404) K43 -> 33165 debugger eval code:4:11
+235/235 -> 33165 debugger eval code:4:11
+Wioska 043-bartGibon I (391|444) K43 -> 15426 debugger eval code:4:11
+92/110 -> 15426 debugger eval code:4:11
+Wioska 044-bartGibon II (390|443) K43 -> 15053 debugger eval code:4:11
+110/110 -> 15053 debugger eval code:4:11
+Wioska 045-bartGibon III (389|442) K43 -> 16376 debugger eval code:4:11
+110/110 -> 16376 debugger eval code:4:11
+Wioska 046-kroczek9 I (394|444) K43 -> 40477 debugger eval code:4:11
+110/110 -> 40477 debugger eval code:4:11
+Wioska 047-Patmat0012 I (394|450) K43 -> 13405 debugger eval code:4:11
+110/110 -> 13405 debugger eval code:4:11
+Wioska 049-Patmat0012 III (393|452) K43 -> 28175
+110/110 -> 28175 debugger eval code:4:11
+Wioska 050-Patmat0012 IV (394|453) K43 -> 13152 debugger eval code:4:11
+110/110 -> 13152 debugger eval code:4:11
+Wioska 051-Patmat0012 V (396|452) K43 -> 13187 debugger eval code:4:11
+110/110 -> 13187 debugger eval code:4:11
+Wioska 053-Zaplecze III (296|391) K32 -> 56043 debugger eval code:4:11
+110/110 -> 56043 debugger eval code:4:11
+Wioska 054-Mati666 I (354|387) K33 -> 34664 debugger eval code:4:11
+10/10 -> 34664 debugger eval code:4:11
+Wioska 055-Arch1IDK I (354|385) K33 -> 36902 debugger eval code:4:11
+110/110 -> 36902 debugger eval code:4:11
+Wioska 056-Arch1IDK II (350|387) K33 -> 35931 debugger eval code:4:11
+110/110 -> 35931 debugger eval code:4:11
+Wioska 057-New World XXV (353|388) K33 -> 34849 debugger eval code:4:11
+110/110 -> 34849 debugger eval code:4:11
+Wioska 058-New World XXVI (349|387) K33 -> 37836 debugger eval code:4:11
+110/110 -> 37836 debugger eval code:4:11
+Wioska 059-Cammeron (353|394) K33 -> 33935 debugger eval code:4:11
+131/131 -> 33935 debugger eval code:4:11
+Wioska 060-Lord Extreme I (383|446) K43 -> 2741 debugger eval code:4:11
+164/164 -> 2741 debugger eval code:4:11
+Wioska 061-Lord Extreme II (384|446) K43 -> 16585 debugger eval code:4:11
+74/91 -> 16585 debugger eval code:4:11
+Wioska 062-Arch1IDK III (349|382) K33 -> 36992 debugger eval code:4:11
+110/110 -> 36992 debugger eval code:4:11
+Wioska 063-New World XXVII (342|399) K33 -> 35474 debugger eval code:4:11
+110/110 -> 35474 debugger eval code:4:11
+Wioska 064-cri11 I (348|377) K33 -> 37909 debugger eval code:4:11
+154/154 -> 37909 debugger eval code:4:11
+Wioska 065-Micha$o I (350|395) K33 -> 33260
+235/235 -> 33260 debugger eval code:4:11
+Wioska 066-Micha$o II (347|394) K33 -> 35018 debugger eval code:4:11
+131/131 -> 35018 debugger eval code:4:11
+Wioska 067-mk76 (345|397) K33 -> 34757 debugger eval code:4:11
+110/110 -> 34757 debugger eval code:4:11
+Wioska 068-Micha$o III (346|392) K33 -> 37207 debugger eval code:4:11
+108/110 -> 37207 debugger eval code:4:11
+Wioska 069-Micha$o IV (347|400) K43 -> 34190 debugger eval code:4:11
+235/235 -> 34190 debugger eval code:4:11
+Wioska 070-Micha$o V (349|399) K33 -> 32597 debugger eval code:4:11
+235/235 -> 32597 debugger eval code:4:11
+Wioska 071-Micha$o VII (344|404) K43 -> 33575 debugger eval code:4:11
+235/235 -> 33575 debugger eval code:4:11
+Wioska 072-TsunamiJum4p I (393|447) K43 -> 14224 debugger eval code:4:11
+206/206 -> 14224 debugger eval code:4:11
+Wioska 073-TsunamiJum4p II (399|443) K43 -> 20571 debugger eval code:4:11
+110/110 -> 20571 debugger eval code:4:11
+Wioska 074-DobySomsiad (343|398) K33 -> 34832 debugger eval code:4:11
+131/131 -> 34832 debugger eval code:4:11
+Wioska 075-Zaplecze IV (298|400) K42 -> 51818 debugger eval code:4:11
+123/154 -> 51818 debugger eval code:4:11
+Wioska 076-Lider2025 I (346|388) K33 -> 38281 debugger eval code:4:11
+110/110 -> 38281 debugger eval code:4:11
+Wioska 077-Lider2025 II (347|389) K33 -> 36360 debugger eval code:4:11
+110/110 -> 36360 debugger eval code:4:11
+Wioska 078-Lider2025 III (343|384) K33 -> 37796 debugger eval code:4:11
+110/110 -> 37796 debugger eval code:4:11
+Wioska 079-Lider2025 IV (339|382) K33 -> 41390 debugger eval code:4:11
+110/110 -> 41390 debugger eval code:4:11
+Wioska 080-Lider2025 V (344|383) K33 -> 38267 debugger eval code:4:11
+110/110 -> 38267 debugger eval code:4:11
+Wioska 081-gienekK (344|384) K33 -> 37653 debugger eval code:4:11
+110/110 -> 37653
+Wioska 082-Lider2025 VI (336|388) K33 -> 40707 debugger eval code:4:11
+110/110 -> 40707 debugger eval code:4:11
+Wioska 083-czarny wygon (341|391) K33 -> 36851 debugger eval code:4:11
+24/26 -> 36851 debugger eval code:4:11
+Wioska 084-Zaplecze V (305|399) K33 -> 48213 debugger eval code:4:11
+154/154 -> 48213 debugger eval code:4:11
+Wioska 085-Zaplecze VI (306|399) K33 -> 45461 debugger eval code:4:11
+154/154 -> 45461 debugger eval code:4:11
+Wioska 086-Zaplecze VII (304|400) K43 -> 49005 debugger eval code:4:11
+154/154 -> 49005 debugger eval code:4:11
+Wioska 087-Zaplecze VIII (306|400) K43 -> 45785 debugger eval code:4:11
+146/154 -> 45785 debugger eval code:4:11
+Wioska 088-Zaplecze IX (303|400) K43 -> 48120 debugger eval code:4:11
+154/154 -> 48120 debugger eval code:4:11
+Wioska 089-Zaplecze X (300|399) K33 -> 50838 debugger eval code:4:11
+154/154 -> 50838 debugger eval code:4:11
+Wioska 090-Zaplecze XI (301|398) K33 -> 48871 debugger eval code:4:11
+154/154 -> 48871 debugger eval code:4:11
+Wioska 091-Zaplecze XII (302|399) K33 -> 48795 debugger eval code:4:11
+154/154 -> 48795 debugger eval code:4:11
+Wioska 092-Zaplecze XIII (301|403) K43 -> 50267 debugger eval code:4:11
+154/154 -> 50267 debugger eval code:4:11
+Wioska 093-Zaplecze XIV (301|404) K43 -> 47813 debugger eval code:4:11
+154/154 -> 47813 debugger eval code:4:11
+Wioska 094-Zaplecze XV (297|405) K42 -> 51723 debugger eval code:4:11
+151/154 -> 51723 debugger eval code:4:11
+Wioska 095-cudnadwisla I (352|386) K33 -> 36433 debugger eval code:4:11
+110/110 -> 36433 debugger eval code:4:11
+Wioska 096-Zaplecze XVI (307|404) K43 -> 45688 debugger eval code:4:11
+154/154 -> 45688 debugger eval code:4:11
+Wioska 097-Zaplecze XVII (299|400) K42 -> 49850
+154/154 -> 49850 debugger eval code:4:11
+Wioska 098-Flapu (394|448) K43 -> 3446 debugger eval code:4:11
+294/294 -> 3446 debugger eval code:4:11
+Wioska 099-Zaplecze XVIII (309|399) K33 -> 46819 debugger eval code:4:11
+110/110 -> 46819 debugger eval code:4:11
+Wioska 100-Zaplecze XVIX (307|400) K43 -> 49364 debugger eval code:4:11
+110/110 -> 49364 debugger eval code:4:11
+Wioska 101-Zaplecze XX (311|399) K33 -> 46930 debugger eval code:4:11
+10/10 -> 46930 debugger eval code:4:11
+Wioska 102-Zaplecze XXI (307|397) K33 -> 45443 debugger eval code:4:11
+10/10 -> 45443 debugger eval code:4:11
+Wioska 103-Zaplecze XXII (308|396) K33 -> 48318 debugger eval code:4:11
+59/59 -> 48318 debugger eval code:4:11
+Wioska 104-Zaplecze XXIII (312|401) K43 -> 45552 debugger eval code:4:11
+6/10 -> 45552 debugger eval code:4:11
+Wioska 105-pierunysiarczyste (332|397) K33 -> 38579 debugger eval code:4:11
+35/35 -> 38579 debugger eval code:4:11
+Wioska 106-Zaplecze XXIV (307|391) K33 -> 49864 debugger eval code:4:11
+206/206 -> 49864 debugger eval code:4:11
+Wioska 107-Zaplecze XXV (308|392) K33 -> 48060 debugger eval code:4:11
+206/206 -> 48060 debugger eval code:4:11
+Wioska 108-Zaplecze XXVI (307|387) K33 -> 49112 debugger eval code:4:11
+206/206 -> 49112 debugger eval code:4:11
+Wioska 109-Zaplecze XXVII (309|392) K33 -> 46893 debugger eval code:4:11
+154/154 -> 46893 debugger eval code:4:11
+Wioska 110-DejMuTero I (350|396) K33 -> 33268 debugger eval code:4:11
+116/165 -> 33268 debugger eval code:4:11
+Wioska 111-DejMuTero II (347|395) K33 -> 33921 debugger eval code:4:11
+87/110 -> 33921 debugger eval code:4:11
+Wioska 112-DejMuTero III (347|399) K33 -> 33796 debugger eval code:4:11
+59/59 -> 33796 debugger eval code:4:11
+Wioska 113-DejMuTero IV (349|403) K43 -> 33334 debugger eval code:4:11
+110/110 -> 33334 debugger eval code:4:11
+Wioska 114-DejMuTero V (348|401) K43 -> 34989
+110/110 -> 34989 debugger eval code:4:11
+Wioska 115-DejMuTero VI (347|402) K43 -> 35257 debugger eval code:4:11
+110/110 -> 35257 debugger eval code:4:11
+Wioska 116-Dioda I (328|360) K33 -> 48427 debugger eval code:4:11
+110/110 -> 48427 debugger eval code:4:11
+Wioska 117-DejMuTero VII (354|405) K43 -> 31963 debugger eval code:4:11
+110/110 -> 31963 debugger eval code:4:11
+Wioska 118-Dioda II (376|401) K43 -> 25674 debugger eval code:4:11
+74/74 -> 25674 debugger eval code:4:11
+Wioska 119-Kingder (375|438) K43 -> 19910 debugger eval code:4:11
+235/235 -> 19910 debugger eval code:4:11
+Wioska 120-Dioda III (380|399) K33 -> 24639 debugger eval code:4:11
+175/235 -> 24639 debugger eval code:4:11
+Wioska 121-Picasso I (357|392) K33 -> 34542 debugger eval code:4:11
+235/235 -> 34542 debugger eval code:4:11
+Wioska 122-Picasso II (360|393) K33 -> 32256 debugger eval code:4:11
+235/235 -> 32256 debugger eval code:4:11
+Wioska 123-Pluto I (364|392) K33 -> 30197 debugger eval code:4:11
+235/235 -> 30197 debugger eval code:4:11
+Wioska 124-Picasso III (358|391) K33 -> 33233 debugger eval code:4:11
+235/235 -> 33233 debugger eval code:4:11
+Wioska 125-Dudal I (359|390) K33 -> 34766 debugger eval code:4:11
+235/235 -> 34766 debugger eval code:4:11
+Wioska 126-Dudal II (360|390) K33 -> 32042 debugger eval code:4:11
+235/235 -> 32042 debugger eval code:4:11
+Wioska 127-Św.Mikołaj (359|392) K33 -> 31801 debugger eval code:4:11
+235/235 -> 31801 debugger eval code:4:11
+Wioska 128-Mati666 (355|391) K33 -> 33282 debugger eval code:4:11
+235/235 -> 33282 debugger eval code:4:11
+Wioska 129-New World XXVIII (355|409) K43 -> 29386 debugger eval code:4:11
+110/110 -> 29386 debugger eval code:4:11
+Wioska 130-snav I (354|390) K33 -> 34475 debugger eval code:4:11
+14/14 -> 34475 debugger eval code:4:11
+Wioska 131-New World XXIX (342|397) K33 -> 41020
+11/11 -> 41020 debugger eval code:4:11
+Wioska 132-miast0 I (388|463) K43 -> 13531 debugger eval code:4:11
+294/294 -> 13531 debugger eval code:4:11
+Wioska 133-Twierdza I (310|360) K33 -> 55570 debugger eval code:4:11
+235/235 -> 55570 debugger eval code:4:11
+Wioska 134-miast0 II (389|463) K43 -> 13868 debugger eval code:4:11
+235/235 -> 13868 debugger eval code:4:11
+Wioska 135-miast0 III (387|465) K43 -> 13630 debugger eval code:4:11
+235/235 -> 13630 debugger eval code:4:11
+Wioska 136-miast0 IV (386|463) K43 -> 13988 debugger eval code:4:11
+235/235 -> 13988 debugger eval code:4:11
+Wioska 137-miast0 V (387|466) K43 -> 13919 debugger eval code:4:11
+235/235 -> 13919 debugger eval code:4:11
+Wioska 138-Twierdza II (311|360) K33 -> 52503 debugger eval code:4:11
+131/131 -> 52503 debugger eval code:4:11
+Wioska 139-Twierdza III (309|360) K33 -> 54144 debugger eval code:4:11
+110/110 -> 54144 debugger eval code:4:11
+Wioska 140-miast0 VI (385|463) K43 -> 14478 debugger eval code:4:11
+110/110 -> 14478 debugger eval code:4:11
+Wioska 141-Twierdza IV (310|359) K33 -> 55704 debugger eval code:4:11
+110/110 -> 55704 debugger eval code:4:11
+Wioska 142-Twierdza V (311|359) K33 -> 56198 debugger eval code:4:11
+110/110 -> 56198 debugger eval code:4:11
+Wioska 143-miast0 VII (385|462) K43 -> 14515 debugger eval code:4:11
+235/235 -> 14515 debugger eval code:4:11
+Wioska 144-miast0 VIII (388|467) K43 -> 14211 debugger eval code:4:11
+235/235 -> 14211 debugger eval code:4:11
+Wioska 145-miast0 IX (391|466) K43 -> 12546 debugger eval code:4:11
+235/235 -> 12546 debugger eval code:4:11
+Wioska 146-miast0 X (391|467) K43 -> 13632 debugger eval code:4:11
+235/235 -> 13632 debugger eval code:4:11
+Wioska 147-Twierdza VI (308|359) K33 -> 58346 debugger eval code:4:11
+74/74 -> 58346 debugger eval code:4:11
+Wioska 148-miast0 XI (388|468) K43 -> 13463 debugger eval code:4:11
+235/235 -> 13463
+Wioska 149-miast0 XII (389|468) K43 -> 13017 debugger eval code:4:11
+154/154 -> 13017 debugger eval code:4:11
+Wioska 150-Dudal III (361|390) K33 -> 34080 debugger eval code:4:11
+131/131 -> 34080 debugger eval code:4:11
+Wioska 151-miast0 XIII (390|468) K43 -> 21409 debugger eval code:4:11
+294/294 -> 21409 debugger eval code:4:11
+Wioska 152-miast0 XIV (389|469) K43 -> 13132 debugger eval code:4:11
+235/235 -> 13132
